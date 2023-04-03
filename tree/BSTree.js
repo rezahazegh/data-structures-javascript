@@ -92,5 +92,11 @@ export default class BSTree {
   }
 
   // traverse: left subtree, right subtree, root
-  postorder(node) {}
+  postorder(node) {
+    if (node !== null) {
+      this.postorder(node.left);
+      this.postorder(node.right);
+      console.log(node.data);
+    }
+  }
 }
