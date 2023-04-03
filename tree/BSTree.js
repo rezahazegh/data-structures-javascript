@@ -73,6 +73,7 @@ export default class BSTree {
     else return this.findMinNode(node.left);
   }
 
+  // traverse: left subtree, root, right subtree
   inorder(node) {
     if (node !== null) {
       this.inorder(node.left);
@@ -81,6 +82,7 @@ export default class BSTree {
     }
   }
 
+  // traverse: root, left subtree, right subtree
   preorder(node) {
     if (node !== null) {
       console.log(node.data);
@@ -89,5 +91,6 @@ export default class BSTree {
     }
   }
 
+  // traverse: left subtree, right subtree, root
   postorder(node) {}
 }
